@@ -1,0 +1,128 @@
+body{
+    background: $white;
+    font-family: 'Arimo', sans-serif;
+}
+.header-frame{
+    margin: 30px 0;
+}
+
+.container{
+    margin: 0 auto;
+    width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav{
+    ul{
+        @extend %listreset;
+        display: flex;
+        gap: 60px;
+        li{
+            a {
+                color: $black;
+                text-decoration: none;
+                padding: 8px 0;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: $black;
+                    transition: 0.3s ease-in-out;
+                }
+                &:hover::before {
+                    width: 100%;
+                }
+            }
+            &.selected {
+                a::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.search-shop-wrap{
+    ul{
+        @extend %listreset;
+        display: flex;
+        gap: 10px;
+        li{
+            a{
+                text-decoration: none;
+                font-size: 16px;
+                color: black;
+                padding: 10px;
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 4px;
+                    right: 4px;
+                    width: 26px;
+                    height: 26px;
+                    border: 1px solid black;
+                    border-radius: 50%;
+                    opacity: 0;
+                    transition: 0.3s ease-in-out;
+                }
+                &:hover::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.baner{
+    background: url(/images/main-baner.jpg) 50% 50%/cover no-repeat;
+    width: 100%;
+    min-height: 750px;
+    @extend %flex-colum-center;
+    position: relative;
+    .baner-wrap{
+        @extend %flex-colum-center;
+        padding: 15px 15px 85px;
+        h3{
+            color: $white;
+            font-size: 15px;
+        }
+        h1{
+            color: $white;
+            font-family: 'Georgian', serif;
+            font-size: 48px;
+            line-height: 52px;
+            margin-bottom: 40px;
+        }
+        .btn-shoping{
+            text-decoration: none;
+            background: #424242;
+            padding: 15px 20px;
+            transition: 0.5s ease-in-out;
+            &:hover{
+                color: #424242;
+                background: $white;
+            }
+        }
+
+    }
+    .btn-anchor{
+        position: absolute;
+        bottom: 65px;
+        width: 13px;
+        height: 13px;
+        border-bottom: 2px solid $white;
+        border-left: 2px solid $white;
+        transform: rotate(-45deg);
+        transition: 0.3s ease-in-out;
+        &:hover {
+            transform: rotate(-45deg) scale(1.4);
+        }
+    }
+}
