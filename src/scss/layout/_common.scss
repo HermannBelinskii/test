@@ -9,6 +9,9 @@ body{
 .container{
     margin: 0 auto;
     width: 1170px;
+}
+
+.header-wrap{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -86,6 +89,7 @@ nav{
     min-height: 750px;
     @extend %flex-colum-center;
     position: relative;
+    margin-bottom: 80px;
     .baner-wrap{
         @extend %flex-colum-center;
         padding: 15px 15px 85px;
@@ -100,16 +104,16 @@ nav{
             line-height: 52px;
             margin-bottom: 40px;
         }
-        .btn-shoping{
-            text-decoration: none;
-            background: #424242;
-            padding: 15px 20px;
-            transition: 0.5s ease-in-out;
-            &:hover{
-                color: #424242;
-                background: $white;
-            }
-        }
+        // .btn-shoping{
+        //     text-decoration: none;
+        //     background: #424242;
+        //     padding: 15px 20px;
+        //     transition: 0.5s ease-in-out;
+        //     &:hover{
+        //         color: #424242;
+        //         background: $white;
+        //     }
+        // }
 
     }
     .btn-anchor{
@@ -123,6 +127,70 @@ nav{
         transition: 0.3s ease-in-out;
         &:hover {
             transform: rotate(-45deg) scale(1.4);
+        }
+    }
+}
+
+.btn-black{
+    text-decoration: none;
+    background: #424242;
+    padding: 10px 20px;
+    transition: 0.5s ease-in-out;
+    display: inline-block;
+    border: 1px solid #424242;
+    &:hover{
+        color: #424242;
+        background: $white;
+        span {
+            border-bottom-color: #424242;
+            border-right-color: #424242;
+        }
+    }
+}
+
+main{
+    .pop-item{
+        @extend %flex-colum-center;
+        margin-bottom: 80px;
+        h2{
+            margin-bottom: 45px;
+        }
+        .row-holder{
+            margin: 0;
+            gap: 30px;
+            .col-3{
+                padding: 0;
+                width: 270px;
+                margin-bottom: 40px;
+                img{
+                    margin-bottom: 20px;
+                }
+                .name-cost-block{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                    span{
+                        font-size: 15px;
+                        padding: 0 15px;
+                    }
+                }
+            }
+        }
+        a{
+            span{
+                width: 9px;
+                height: 9px;
+                display: inline-block;
+                position: relative;
+                border-bottom: 1px solid $white;
+                border-right: 1px solid $white;
+                transform: rotate(-45deg);
+                position: relative;
+                top: -2px;
+                transition: 0.3s ease-in-out;
+                margin: 0 2px;
+            }
         }
     }
 }
