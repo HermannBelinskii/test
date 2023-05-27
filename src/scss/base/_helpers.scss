@@ -12,6 +12,13 @@
   justify-content: center;
 }
 
+%bg-50-50-cover-no-rep{
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
 // clearfix
 %clearfix {
  &:after {

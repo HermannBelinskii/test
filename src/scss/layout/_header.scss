@@ -1,0 +1,64 @@
+header{
+    margin: 30px 0;
+}
+
+.header-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-list{
+    @extend %listreset;
+    display: flex;
+    gap: 60px;
+
+    a {
+        color: $black;
+        text-decoration: none;
+        padding: 8px 0;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: $primary-color;
+            transition: 0.3s ease-in-out;
+        }
+        
+        &:hover::before {
+            width: 100%;
+        }
+    }
+
+    &.selected {
+        a::before {
+            width: 100%;
+        }
+    }
+}
+
+
+.search-shop-wrap{
+    @extend %listreset;
+    display: flex;
+    gap: 10px;
+
+    a{
+        text-decoration: none;
+        padding: 10px;
+        position: relative;
+        border-radius: 50%;
+        transition: 0.3s ease-in-out;
+
+        &:hover{
+            color: $white;
+            background: $primary-color;
+            border-radius: 50%;
+        }
+    }
+}

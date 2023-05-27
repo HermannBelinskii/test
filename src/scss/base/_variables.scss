@@ -9,18 +9,18 @@ $light-blue: #39f;
 $light-blue: #efefef;
 $sunset-orange: #fe4f42;
 
-$primary-color: $sunset-orange;
+$primary-color: $black;
 
 
 
-$base-font-sans-serif: 'Roboto', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$base-font-sans-serif: 'Arimo', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 $base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
 
 // Body
 $base-text-color: $black !default;
 $base-background-color: $white !default;
-$font-size-base: 16px !default;
-$line-height-base: 1.2 !default; 
+$font-size-base: 15px !default;
+$line-height-base: 1.5 !default; 
 $base-font-family: $base-font-sans-serif !default;
 
 $vertical-rhythm: ($line-height-base * 1em);
@@ -28,7 +28,7 @@ $vertical-rhythm: ($line-height-base * 1em);
 $base-min-width: 320px;
 
 // Liks
-$base-link-color: $light-blue;
+$base-link-color: $primary-color;
 
 // Buttons 
 $btn-color: $white !default;
@@ -43,14 +43,14 @@ $form-element-focus-border-color: $black !default;
 $placeholder-color: $gray !default;
 
 // Headers
-$h1-font-size: 40px !default;
-$h2-font-size: 27px !default;
-$h3-font-size: 24px !default;
+$h1-font-size: 48px !default;
+$h2-font-size: 24px !default;
+$h3-font-size: 15px !default;
 $h4-font-size: 21px !default;
 $h5-font-size: 17px !default;
 $h6-font-size: 15px !default;
 
-$headings-font-family: inherit !default;
+$headings-font-family: 'Giorgia', serif !default;
 $headings-color: inherit !default;
 
 

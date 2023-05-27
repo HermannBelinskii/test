@@ -11,18 +11,25 @@ h6, .h6,
   font-weight: bold;
   margin: 0 0 0.5em;
   color: $headings-color;
+  line-height: 1.2;
 }
 
 h1, .h1 {
   font-size: $h1-font-size;
+  margin-bottom: 40px;
+  color: $white;
 }
 
 h2, .h2 {
   font-size: $h2-font-size;
+  margin-bottom: 45px;
 }
 
 h3, .h3 {
   font-size: $h3-font-size;
+  color: $white;
+  font-family: $base-font-family;
+  font-weight: normal;
 }
 
 h4, .h4 {
