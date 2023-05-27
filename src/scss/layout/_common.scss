@@ -133,17 +133,17 @@ nav{
 
 .btn-black{
     text-decoration: none;
-    background: #424242;
+    background: $black;
     padding: 10px 20px;
     transition: 0.5s ease-in-out;
     display: inline-block;
-    border: 1px solid #424242;
+    border: 1px solid $black;
     &:hover{
-        color: #424242;
+        color: $black;
         background: $white;
         span {
-            border-bottom-color: #424242;
-            border-right-color: #424242;
+            border-bottom-color: $black;
+            border-right-color: $black;
         }
     }
 }
@@ -179,8 +179,8 @@ main{
         }
         a{
             span{
-                width: 9px;
-                height: 9px;
+                width: 8px;
+                height: 8px;
                 display: inline-block;
                 position: relative;
                 border-bottom: 1px solid $white;
@@ -189,7 +189,7 @@ main{
                 position: relative;
                 top: -2px;
                 transition: 0.3s ease-in-out;
-                margin: 0 2px;
+                margin: 0 5px;
             }
         }
     }
