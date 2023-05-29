@@ -11,6 +11,14 @@
     position: relative;
     margin-bottom: 80px;
 
+    @include media("<desktop") {
+        margin-bottom: 40px;
+    }
+
+    @include media("<tablet") {
+        margin-bottom: 15px;
+    }
+
     .container{
         @extend %flex-colum-center;
         padding-bottom: 85px;
@@ -38,6 +46,14 @@
     margin-bottom: 80px;
     text-align: center;
 
+    @include media("<desktop") {
+        margin-bottom: 40px;
+    }
+
+    @include media("<tablet") {
+        margin-bottom: 15px;
+    }
+
     .row-holder{
         margin: 0;
     }
@@ -45,10 +61,19 @@
     .col-3{
         padding: 0;
         margin-bottom: 40px;
+
+        // @include media("<tablet") {
+        //     margin-bottom: 20px;
+        //     width: 45%;
+        // }
     }
 
     img{
         margin-bottom: 20px;
+
+        @include media("<tablet") {
+            margin-bottom: 10px;
+        }
     }
 
     .name-cost-block{
@@ -61,19 +86,114 @@
             padding: 0 15px;
         }
     }
+}
 
-    .btn span{
-        width: 8px;
-        height: 8px;
-        display: inline-block;
-        position: relative;
-        border-bottom: 1px solid $white;
-        border-right: 1px solid $white;
-        transform: rotate(-45deg);
-        position: relative;
-        top: -2px;
-        transition: 0.3s ease-in-out;
-        margin: 0 5px;
+.banner-about-us{
+    @extend %bg-50-50-cover-no-rep;
+    min-height: 472px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 80px;
+
+    .container{
+        text-align: right;
+        // временно!!!!!
+        width: 1170px;
+    }
+
+}
+
+.insta-block{
+    margin-bottom: 80px;
+
+    .row-holder{
+        gap: 0;
+        // временно!!!!!
+    }
+
+    .col-6{
+        margin: auto 0;
+    }
+
+    h3{
+        color: $primary-color;
+    }
+
+    h4{
+        color: $primary-color;
+    }
+
+    p{
+        margin-bottom: 20px;
+        padding-right: 10px;
+    }
+
+    .insta-block-img{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+}
+
+.sosial{
+    text-decoration: none;
+    font-size: 40px;
+    transition: 0.3s ease-in-out;
+
+    &:hover{
+        color: grey;
     }
 }
 
+.why-block{
+    background: $secondary-background-color;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    text-align: center;
+
+    h3{
+        color: $primary-color;
+    }
+
+    h4{
+        color: $primary-color;
+        margin-bottom: 40px;
+    }
+
+    .col-4{
+        background: $white;
+        padding: 50px 40px;
+        text-align: left;
+    }
+
+    .heading-and-icon{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 80px;
+        margin-bottom: 35px;
+    }
+
+    span{
+        font-size: 43px;
+    }
+}
+
+.banner-workshope{
+    @extend %bg-50-50-cover-no-rep;
+    min-height: 472px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    .container{
+        text-align: left;
+        // временно!!!!!
+        width: 1170px;
+    }
+}

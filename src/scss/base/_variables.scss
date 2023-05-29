@@ -2,7 +2,7 @@
 // Color calculator - http://razorjam.github.io/sasscolourfunctioncalculator/
 // Color names - http://name-of-color.com/
 
-$gray: #999;
+$gray: #f5f5f5;
 $black: #222;
 $white: #fff;
 $light-blue: #39f;
@@ -19,6 +19,7 @@ $base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
 // Body
 $base-text-color: $black !default;
 $base-background-color: $white !default;
+$secondary-background-color: $gray !default;
 $font-size-base: 15px !default;
 $line-height-base: 1.5 !default; 
 $base-font-family: $base-font-sans-serif !default;
@@ -37,17 +38,17 @@ $btn-padding: 0.4em 0.7em !default;
 $btn-font-size: inherit !default;
 
 // Forms
-$form-element-padding: $btn-padding !default;
-$form-element-border-color: $gray !default;
+$form-element-padding: 15px 15px 15px 0 !default;
+$form-element-border-color: $primary-color !default;
 $form-element-focus-border-color: $black !default;
-$placeholder-color: $gray !default;
+$placeholder-color: $primary-color !default;
 
 // Headers
 $h1-font-size: 48px !default;
 $h2-font-size: 24px !default;
 $h3-font-size: 15px !default;
-$h4-font-size: 21px !default;
-$h5-font-size: 17px !default;
+$h4-font-size: 36px !default;
+$h5-font-size: 20px !default;
 $h6-font-size: 15px !default;
 
 $headings-font-family: 'Giorgia', serif !default;

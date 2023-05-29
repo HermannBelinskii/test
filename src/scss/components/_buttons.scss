@@ -7,6 +7,20 @@
     display: inline-block;
     border: 1px solid $black;
 
+    & span{
+        width: 8px;
+        height: 8px;
+        display: inline-block;
+        position: relative;
+        border-bottom: 1px solid $white;
+        border-right: 1px solid $white;
+        transform: rotate(-45deg);
+        position: relative;
+        top: -2px;
+        transition: 0.3s ease-in-out;
+        margin: 0 5px;
+    }
+
     &:hover{
         color: $black;
         background: $white;
@@ -16,5 +30,11 @@
             border-right-color: $black;
         }
     }
+
 }
 
+.secondary{
+    @include media("<tablet") {
+        margin: 0 auto;
+    }
+}

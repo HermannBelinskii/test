@@ -8,7 +8,7 @@ h5, .h5,
 h6, .h6,
 .h {
   font-family: $headings-font-family;
-  font-weight: bold;
+  font-weight: normal;
   margin: 0 0 0.5em;
   color: $headings-color;
   line-height: 1.2;
@@ -18,11 +18,25 @@ h1, .h1 {
   font-size: $h1-font-size;
   margin-bottom: 40px;
   color: $white;
+  text-align: center;
+
+  @include media("<tablet") {
+    font-size: $h1-font-size * 0.7;
+  }
+
+  @include media("<phone") {
+    font-size: $h1-font-size * 0.5;
+  }
+
 }
 
 h2, .h2 {
   font-size: $h2-font-size;
   margin-bottom: 45px;
+
+  @include media("<tablet") {
+    margin-bottom: 15px;
+  }
 }
 
 h3, .h3 {
@@ -30,14 +44,21 @@ h3, .h3 {
   color: $white;
   font-family: $base-font-family;
   font-weight: normal;
+
+  @include media("<tablet") {
+    font-size: $h3-font-size * 0.7;
+  }
 }
 
 h4, .h4 {
   font-size: $h4-font-size;
+  color: $white;
+  margin-bottom: 30px;
 }
 
 h5, .h5 {
   font-size: $h5-font-size;
+  margin: 0;
 }
 
 h6, .h6 {
