@@ -1,53 +1,117 @@
+// @use "sass:math";
+
+// .row-holder{
+// 	display: flex;
+// 	flex-flow: row wrap;
+//   flex-grow: 1;
+//   gap: $gutter;
+
+//   @include media("<desktop") {
+//     gap: 14px;
+//   }
+
+//   @include media("<tablet") {
+//     gap: 10px;
+//   }
+// }
+
+// @for $i from 1 through $columns {
+//   .col-#{$i} {
+//    @extend %clearfix;
+//    width: percentage(math.div(1, $columns) * $i);
+
+//   @include media("<tablet") {
+//    margin-bottom: 20px;
+//    width: 100%;
+//  }
+// }
+// }
+
+// @for $i from 1 through $columns {
+//   .pull-#{$i} {
+//    @extend %clearfix;
+//    right: percentage(math.div(1, $columns) * $i);
+//    position: relative;
+
+//    @include media("<tablet") {
+//     right: auto;
+//    }
+// }
+// }
+
+// @for $i from 1 through $columns {
+//   .push-#{$i} {
+//    @extend %clearfix;
+//    left: percentage(math.div(1, $columns) * $i);
+//    position: relative;
+
+//    @include media("<tablet") {
+//     left: auto;
+//    }
+// }
+// }
+
 @use "sass:math";
 
 .row-holder{
-	display: flex;
-	flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
   flex-grow: 1;
-  gap: $gutter;
+  margin-left:-($gutter * 0.5);
+  margin-right:-($gutter * 0.5);
 
   @include media("<desktop") {
-    gap: 14px;
+    margin-left: -7px;
+    margin-right: -7px;
   }
 
   @include media("<tablet") {
-    gap: 10px;
+    margin-left: -5px;
+    margin-right: -5px;
   }
 }
 
 @for $i from 1 through $columns {
   .col-#{$i} {
-   @extend %clearfix;
-   width: percentage(math.div(1, $columns) * $i);
+    @extend %clearfix;
+    width: percentage(math.div(1, $columns) * $i);
+    padding-left: ($gutter * 0.5);
+    padding-right: ($gutter * 0.5);
 
-  @include media("<tablet") {
-   margin-bottom: 20px;
-   width: 100%;
- }
-}
+    @include media("<desktop") {
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+
+    @include media("<tablet") {
+      padding-left: 5px;
+      padding-right: 5px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
 }
 
 @for $i from 1 through $columns {
   .pull-#{$i} {
-   @extend %clearfix;
-   right: percentage(math.div(1, $columns) * $i);
-   position: relative;
+    @extend %clearfix;
+    right: percentage(math.div(1, $columns) * $i);
+    position: relative;
 
-   @include media("<tablet") {
-    right: auto;
-   }
-}
+    @include media("<tablet") {
+      right: auto;
+    }
+  }
 }
 
 @for $i from 1 through $columns {
   .push-#{$i} {
-   @extend %clearfix;
-   left: percentage(math.div(1, $columns) * $i);
-   position: relative;
+    @extend %clearfix;
+    left: percentage(math.div(1, $columns) * $i);
+    position: relative;
 
-   @include media("<tablet") {
-    left: auto;
-   }
+    @include media("<tablet") {
+      left: auto;
+    }
+  }
 }
-}
-
