@@ -1381,6 +1381,21 @@ header {
 .pop-item .name-cost-block span {
   padding: 0 15px;
 }
+.pop-item .sale {
+  position: relative;
+  display: block;
+}
+.pop-item .sale::before {
+  position: absolute;
+  content: " ";
+  bottom: -5px;
+  right: -5px;
+  border-radius: 50%;
+  background: #eeeeee;
+  border: 1px solid #ababab;
+  width: 64px;
+  height: 64px;
+}
 
 .banner-about-us {
   min-height: 472px;
